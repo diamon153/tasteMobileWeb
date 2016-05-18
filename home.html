@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>!-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
 </head>
+
 <body>
 
-<div data-role="page" id="pageone">
-  <div data-role="header">
-    <h1>Welcome To My Homepage</h1>
-  </div>
+    <div data-role="page" id="pageone">
+        <div data-role="header">
+            <h1>Welcome To My Homepage</h1>
+        </div>
 
-  <div data-role="main" class="ui-content">
-    <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
-    <a href="#pagetwo">Go to Page Two</a>
-  </div>
+        <div data-role="main" class="ui-content">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div> 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
-<div data-role="page" id="pagetwo">
-  <div data-role="header">
-    <h1>Welcome To My Homepage</h1>
-  </div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
+            <a href="#pagetwo">Go to Page Two</a>
+        </div>
 
-  <div data-role="main" class="ui-content">
-    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pageone">Go to Page One</a>
-  </div>
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+    </div>
 
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div> 
+    <div data-role="page" id="pagetwo">
+        <div data-role="header">
+            <h1>Welcome To My Homepage</h1>
+        </div>
 
+        <div data-role="main" class="ui-content">
+            <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
+            <a href="#pageone">Go to Page One</a>
+        </div>
+
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+    </div>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: '.swiper-pagination',
+
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
+            // And if we need scrollbar
+            scrollbar: '.swiper-scrollbar',
+        })
+    </script>
 </body>
+
 </html>

@@ -18,69 +18,35 @@
 <body>
 
     <div data-role="page" id="pageone">
-        <div data-role="header">
-            <h1>Welcome To My Homepage</h1>
-        </div>
-
-        <div data-role="main" class="ui-content">
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-            <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
-            <a href="#pagetwo">Go to Page Two</a>
-        </div>
-
-        <div data-role="footer">
-            <h1>Footer Text</h1>
-        </div>
+   <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
     </div>
-
-    <div data-role="page" id="pagetwo">
-        <div data-role="header">
-            <h1>Welcome To My Homepage</h1>
-        </div>
-
-        <div data-role="main" class="ui-content">
-            <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-            <a href="#pageone">Go to Page One</a>
-        </div>
-
-        <div data-role="footer">
-            <h1>Footer Text</h1>
-        </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
     </div>
     <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: '.swiper-pagination',
-
-            // Navigation arrows
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-
-            // And if we need scrollbar
-            scrollbar: '.swiper-scrollbar',
-        })
+          $(document).ready(function () {
+    //initialize swiper when document ready  
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true
+    })        
+  });
     </script>
 </body>
 
